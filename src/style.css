@@ -1,5 +1,4 @@
 /* CSS Custom Properties Definitions */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap');
 
 :root {
   --maxWidth-none: "none";
@@ -28,18 +27,20 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
+  --fontFamily-sans: "Montserrat Variable", "Noto Sans KR", 
+    system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  --fontFamily-serif: "Merriweather", "Noto Serif KR", 
+    "Georgia", Cambria, "Times New Roman",
     Times, serif;
+  --fontFamily-monospace: "Noto Sans Mono", 
+    Menlo, Consolas, "Courier New", monospace;
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
-  --fontWeight-medium: 500;
-  --fontWeight-semibold: 600;
   --fontWeight-bold: 700;
-  --fontWeight-extrabold: 800;
   --fontWeight-black: 900;
   --fontSize-root: 16px;
   --lineHeight-none: 1;
@@ -55,22 +56,13 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  /*
-  --color-primary: #005b99;
-  --color-text: #2e353f;
-  --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
-  --color-accent: #d1dce5;
-  --color-bg: #ffffff;
-  */
   --color-primary: #e83e8c;
-  --color-text: #aaaaaa;
-  --color-text-light: #dddddd;
-  --color-heading: #e2e2e2;
+  --color-text: #dee2e6;
+  --color-text-light: #cccccc;
+  --color-heading: #eeeeee;
   --color-heading-black: #ffffff;
   --color-accent: #444444;
-  --color-bg: #242424;
+  --color-background: #212529;
 }
 
 /* HTML elements */
@@ -92,7 +84,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
-  background-color: var(--color-bg);
+  background-color: var(--color-background);
 }
 
 footer {
@@ -254,7 +246,7 @@ a:focus {
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
-  margin-bottom: var(--spacing-12);
+  margin-bottom: var(--spacing-20);
 }
 
 .global-header {
@@ -338,33 +330,3 @@ a:focus {
     list-style-position: inside;
   }
 }
-
-/* Prism.js */
-pre[class*="language-"] {
-  border-radius: 0.25rem;
-}
-
-/* Scrollbar */
-::-webkit-scrollbar-button,
-::-webkit-scrollbar-corner,
-::-webkit-scrollbar-resizer,
-::-webkit-scrollbar-track,
-::-webkit-scrollbar { background-color: transparent; }
-::-webkit-scrollbar-button:horizontal:increment,
-::-webkit-scrollbar-button:horizontal:decrement,
-::-webkit-scrollbar-button:vertical:increment,
-::-webkit-scrollbar-button:vertical:decrement,
-::-webkit-scrollbar-thumb { background-color: var(--color-accent); }
-::-webkit-scrollbar-button:horizontal:increment,
-::-webkit-scrollbar-button:horizontal:decrement,
-::-webkit-scrollbar-button:vertical:increment,
-::-webkit-scrollbar-button:vertical:decrement { 
-  background-color: var(--color-accent); 
-  background-position: center center; 
-  background-repeat: no-repeat; 
-  background-size: 50% 50%; 
-}
-::-webkit-scrollbar-button:horizontal:increment { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' focusable='false' width='0.45em' height='1em' style='-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);' preserveAspectRatio='xMidYMid meet' viewBox='0 0 576 1280'%3E%3Cg transform='translate(576 0) scale(-1 1)'%3E%3Cpath d='M576 192v896q0 26-19 45t-45 19t-45-19L19 685Q0 666 0 640t19-45l448-448q19-19 45-19t45 19t19 45z' fill='%23666666'/%3E%3C/g%3E%3C/svg%3E"); }
-::-webkit-scrollbar-button:horizontal:decrement { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' focusable='false' width='0.45em' height='1em' style='-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);' preserveAspectRatio='xMidYMid meet' viewBox='0 0 576 1280'%3E%3Cpath d='M576 192v896q0 26-19 45t-45 19t-45-19L19 685Q0 666 0 640t19-45l448-448q19-19 45-19t45 19t19 45z' fill='%23666666'/%3E%3C/svg%3E"); }
-::-webkit-scrollbar-button:vertical:increment { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' focusable='false' width='0.8em' height='1em' style='-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);' preserveAspectRatio='xMidYMid meet' viewBox='0 0 1024 1280'%3E%3Cpath d='M1024 448q0 26-19 45L557 941q-19 19-45 19t-45-19L19 493Q0 474 0 448t19-45t45-19h896q26 0 45 19t19 45z' fill='%23666666'/%3E%3C/svg%3E"); }
-::-webkit-scrollbar-button:vertical:decrement { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' focusable='false' width='0.8em' height='1em' style='-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);' preserveAspectRatio='xMidYMid meet' viewBox='0 0 1024 1280'%3E%3Cpath d='M1024 960q0 26-19 45t-45 19H64q-26 0-45-19T0 960t19-45l448-448q19-19 45-19t45 19l448 448q19 19 19 45z' fill='%23666666'/%3E%3C/svg%3E"); }
